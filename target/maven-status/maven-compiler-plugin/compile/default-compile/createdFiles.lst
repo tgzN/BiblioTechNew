@@ -1,0 +1,11 @@
+com\mycompany\bibliotechnew\model\Livro.class
+com\mycompany\bibliotechnew\model\Emprestimo.class
+com\mycompany\bibliotechnew\service\EmprestimoService.class
+com\mycompany\bibliotechnew\repository\LivroRepository.class
+com\mycompany\bibliotechnew\repository\UsuarioRepository.class
+com\mycompany\bibliotechnew\service\LivroService.class
+com\mycompany\bibliotechnew\model\Usuario.class
+com\mycompany\bibliotechnew\BiblioTechNew.class
+com\mycompany\bibliotechnew\util\DBConnection.class
+com\mycompany\bibliotechnew\service\UsuarioService.class
+com\mycompany\bibliotechnew\repository\EmprestimoRepository.class
