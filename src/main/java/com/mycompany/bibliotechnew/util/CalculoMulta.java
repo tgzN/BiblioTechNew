@@ -4,10 +4,12 @@
  */
 package com.mycompany.bibliotechnew.util;
 
-/**
- *
- * @author Tiago
- */
 public class CalculoMulta {
-    
+
+    public static double calcularMulta(int diasAtraso) {
+        if (diasAtraso <= 0) {
+            return 0.0;
+        }
+        return diasAtraso * 2.0;
+    }
 }
