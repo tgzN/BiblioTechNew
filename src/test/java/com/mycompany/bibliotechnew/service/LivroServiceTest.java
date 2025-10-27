@@ -1,24 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.bibliotechnew.service;
 
 import com.mycompany.bibliotechnew.model.Livro;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
-class LivroServiceTest {
+public class LivroServiceTest {
 
     @Test
-    void testDisponibilidadeLivro() {
-        Livro livro = new Livro(1, "O Senhor dos Anéis", true);
-        
-        // Verifica se o livro está disponível
-        assertTrue(livro.isDisponivel());
-        
+    public void testDisponibilidadeLivro() {
+        // Cria um livro usando o construtor que define status como "Disponível"
+        Livro livro = new Livro("O Senhor dos Anéis", "J.R.R. Tolkien", "Fantasia");
+
+        // Verifica se o status inicial é "Disponível"
+        assertTrue(livro.getStatus().equals("Disponível"));
+
         // Simula empréstimo
-        livro.setDisponivel(false);
-        assertFalse(livro.isDisponivel());
+        livro.setStatus("Emprestado");
+        assertTrue(livro.getStatus().equals("Emprestado"));
+
+        // Devolução
+        livro.setStatus("Disponível");
+        assertTrue(livro.getStatus().equals("Disponível"));
     }
 }
